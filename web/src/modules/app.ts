@@ -46,7 +46,7 @@ import { p2pOffersReducer } from './user/p2pOffers';
 import { p2pTransfersReducer } from './user/p2pTransfers';
 import { p2pOrdersReducer } from './user/p2pOrders';
 import { p2pDisputeReducer } from './user/p2pDispute';
-import { commercialReducer } from '../custom/modules/user/commercial';
+import { commercialReducer } from '../custom/modules/user/organization';
 
 export const publicReducer = combineReducers({
     alerts: alertReducer,
