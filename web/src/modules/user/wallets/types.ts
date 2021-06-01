@@ -12,6 +12,9 @@ export interface Wallet {
     explorerAddress?: string;
     deposit_address?: WalletAddress;
     active?: boolean;
+    todayLimit?: string;
+    available?: string;
+    used?: string;
 }
 export interface WalletAddress {
     address: string;
