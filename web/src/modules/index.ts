@@ -47,6 +47,7 @@ import { P2POffersState, rootP2POffersSaga } from './user/p2pOffers';
 import { P2PTransfersState, rootP2PTransfersSaga } from './user/p2pTransfers';
 import { P2POrdersState, rootP2POrdersSaga } from './user/p2pOrders';
 import { P2PDisputeState, rootP2PDisputeSaga } from './user/p2pDispute';
+import { CommercialState, rootCommercialSaga } from 'src/custom/modules/user/commercial';
 
 export * from './admin/config';
 export * from './admin/markets';
@@ -87,6 +88,7 @@ export * from './user/p2pOffers';
 export * from './user/p2pOrders';
 export * from './user/p2pTransfers';
 export * from './user/p2pDispute';
+export * from '../custom/modules/user/commercial';
 
 export interface RootState {
     public: {
@@ -136,6 +138,7 @@ export interface RootState {
         p2pTransfers: P2PTransfersState;
         p2pOrders: P2POrdersState;
         p2pDispute: P2PDisputeState;
+        commercial: CommercialState;
     };
     admin: {
         configUpdate: ConfigUpdateState;
@@ -194,5 +197,6 @@ export function* rootSaga() {
         call(rootP2POrdersSaga),
         call(rootP2PTransfersSaga),
         call(rootP2PDisputeSaga),
+        call(rootCommercialSaga),
     ]);
 }
